@@ -93,6 +93,7 @@ public class BFS {
      * Ne deriva che se c'è un target da raggiungere, esso è stato raggiunto non appena viene incontrato.
      * 
      */
+    
     public static Map<Integer,Integer> getDistance(Graph g, int start) {
         Queue<Integer> codaDiVisitatiDiCuiVisionareVicini = new ArrayDeque<Integer>();
         Set<Integer> alreadyVisited = new HashSet<Integer>();
@@ -121,6 +122,7 @@ public class BFS {
      * Esegue BFS sul grafo `g` a partire dal nodo `start`.
      * Restituisce la lista dei nodi visitati nell'ordine di visita.
      */
+
     public static List<Integer> bfs(Graph g, int start) {
         Set<Integer> alreadyVisited = new HashSet<Integer>();
         Queue<Integer> coda = new ArrayDeque<>();
@@ -145,6 +147,7 @@ public class BFS {
      * La bfs visita tutti i nodi di un grafo, in questo modo è in grado di stabilire se essi sono collegati fra loro.
      * Il nodo iniziale start, comunica per forza con se stesso, per tanto target è raggiungibile non appena la bfs ci arriva.
      */
+
     public static boolean bfs(Graph g, int start, int target) {
         Set<Integer> alreadySeen = new HashSet<>();
         Queue<Integer> willSee = new ArrayDeque<>();
