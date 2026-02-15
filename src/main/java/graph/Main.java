@@ -1,10 +1,11 @@
 package graph;
+import graph.FloodFill;
 
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Graph g = new Graph();
+  /*       Graph g = new Graph();
 
         // Build a strange graph to test BFS
         //    1
@@ -34,6 +35,22 @@ public class Main {
         Map<Integer,Integer> distance = BFS.getDistance(g, start);
         List shortestPath = BFS.getShortestPath(start, target, g);
         System.out.println(distance);
-        System.out.print(shortestPath);
+        System.out.print(shortestPath); */
+
+
+        // Creiamo una griglia con un centro:
+
+        int[][] grid = {
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0}
+        };
+
+        FloodFill floodFill = new FloodFill(grid);
+        // Applichiamo il flood fill a partire dalla cella centrale (2, 2)
+        floodFill.floodfill(2, 2);
+
     }
 }
